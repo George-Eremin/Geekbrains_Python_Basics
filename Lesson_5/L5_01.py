@@ -4,7 +4,7 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 try:
-    with open("user_text.txt", "w", encoding='utf-8') as file:
+    with open("text_01.txt", "w", encoding='utf-8') as file:
         while True:
             user_line = input("Введите строку для сохранения в файл. Пустая строка завершает программу. >>>")
             if user_line == '':
