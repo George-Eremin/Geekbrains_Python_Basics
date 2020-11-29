@@ -6,4 +6,30 @@
 третьего (зеленый) — на ваше усмотрение.
 Переключение между режимами должно осуществляться только в указанном порядке (красный, желтый, зеленый).
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
+Задачу можно усложнить, реализовав проверку порядка режимов,
+и при его нарушении выводить соответствующее сообщение и завершать скрипт.
 """
+from time import sleep
+
+
+class TrafficLight:
+    __color: str
+
+    def running(self):
+        order_dict = {'красный': 7, 'желтый': 2, 'зеленый': 10}
+        print('Светофор начал работать')
+
+        def wait_n_sec(seconds: int):
+            count = 0
+            for t in range(seconds):
+                sleep(1)
+                count += 1
+                print(f'Прошло секунд: {count}, цвет светофора: {self.__color}')
+
+        for mode in order_dict:
+            self.__color = mode
+            wait_n_sec(order_dict.get(mode))
+
+
+my_traffic_light = TrafficLight()
+my_traffic_light.running()
