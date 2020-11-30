@@ -9,3 +9,23 @@
 Проверить работу примера на реальных данных
 (создать экземпляры класса Position, передать данные, проверить значения атрибутов, вызвать методы экземпляров).
 """
+
+
+class Worker
+  name: str
+  surname: str
+  position: str
+  _income: {"wage": float, "bonus": float}
+  
+  def __init(self, name:str, surname: str):
+    self.name = name
+    self.surname = surname
+    self._income = {wage: 100, bonus: 20} 
+
+class Position(Worker)
+  def get_full_name():
+    return (f'{self.name} {self.surname})
+  
+  
+
+
